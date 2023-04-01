@@ -4,6 +4,7 @@ import { GroupController } from "./controller/group-controller"
 
 export const Routes = [
   // this is a test comment
+  // see conflict
   {
     method: "get",
     route: "/student/get-all",
