@@ -1,7 +1,10 @@
 import { StudentController } from "./controller/student-controller"
 import { RollController } from "./controller/roll-controller"
+import { GroupController } from "./controller/group-controller"
 
 export const Routes = [
+  // this is a test comment
+  // see conflict
   {
     method: "get",
     route: "/student/get-all",
@@ -79,5 +82,41 @@ export const Routes = [
     route: "/roll/update-student-roll-state",
     controller: RollController,
     action: "updateStudentRollState",
+  },
+  {
+    method: "get",
+    route: "/group/get-all",
+    controller: GroupController,
+    action: "allGroups",
+  },
+  {
+    method: "post",
+    route: "/group/create",
+    controller: GroupController,
+    action: "createGroup",
+  },
+  {
+    method: "put",
+    route: "/group/update",
+    controller: GroupController,
+    action: "updateUroup",
+  },
+  {
+    method: "delete",
+    route: "/group/delete",
+    controller: GroupController,
+    action: "removeGroup",
+  },
+  {
+    method: "get",
+    route: "/group/student",
+    controller: GroupController,
+    action: "getGroupStudents",
+  },
+  {
+    method: "post",
+    route: "/group/filters",
+    controller: GroupController,
+    action: "runGroupFilters",
   }
 ]
